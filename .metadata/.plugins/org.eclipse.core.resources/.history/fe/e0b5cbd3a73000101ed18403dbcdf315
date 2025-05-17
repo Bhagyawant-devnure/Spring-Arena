@@ -1,0 +1,8 @@
+package com.customeException.exception;
+
+public class InvalidorderException extends Exception{
+	public InvalidorderException(String mesg) {
+		super(mesg);
+	}
+
+}

@@ -1,0 +1,12 @@
+package com.FoodDeliveryApplication.requirement;
+
+import com.customeException.exception.FoodNotFoundException;
+import com.customeException.exception.InvalidorderException;
+
+public interface FoodService 
+{
+	void orderFood(String foodItem) throws FoodNotFoundException,InvalidorderException;
+void cancelOrder(String foodItem) throws InvalidorderException;
+void viewMenu();
+}
+//Interface defining required food delivery operations

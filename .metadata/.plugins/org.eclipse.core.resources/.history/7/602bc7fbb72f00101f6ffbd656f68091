@@ -1,0 +1,20 @@
+package com.FoodDeliveryApplication.user;
+
+import java.applet.AppletContext;
+import java.util.Scanner;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextInitializer;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class FoodDeliveryUser {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("com/deva/cfgs/applicationContext.xml");
+		System.out.println("choose restaurant");
+		System.out.println("1.zomato");
+		System.out.println("2.swiggy");
+	}
+
+}

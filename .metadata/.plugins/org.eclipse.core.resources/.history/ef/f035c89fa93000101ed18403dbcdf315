@@ -1,0 +1,27 @@
+package com.MovieBookingApplication.beans;
+
+import com.MovieBookingApplication.requirement.BookingService;
+import com.MovieBookingApplication.requirement.InvalidBookingException;
+import com.MovieBookingApplication.requirement.MovieNotFoundException;
+
+public class BookMyShowService implements BookingService{
+
+	@Override
+	public void bookTicket(String movieName) throws MovieNotFoundException, InvalidBookingException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void cancleTicket(String movieName) throws InvalidBookingException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void viewShows() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

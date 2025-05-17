@@ -1,0 +1,76 @@
+package com.FoodDeliveryApplication.beans;
+
+import java.util.List;
+
+import com.FoodDeliveryApplication.requirement.FoodService;
+import com.customeException.exception.FoodNotFoundException;
+import com.customeException.exception.InvalidorderException;
+
+public class ZomatoDelivery implements FoodService{
+	
+	private static String restaurantName;
+	private static String restaurantLocation;
+	private static String restaurantCode;
+
+	
+
+	public static void setRestaurantName(String restaurantName) {
+		ZomatoDelivery.restaurantName = restaurantName;
+	}
+
+	public static void setRestaurantLocation(String restaurantLocation) {
+		ZomatoDelivery.restaurantLocation = restaurantLocation;
+	}
+
+	public static void setRestaurantCode(String restaurantCode) {
+		ZomatoDelivery.restaurantCode = restaurantCode;
+	}
+
+	@Override
+	public void orderFood(String foodItem) throws FoodNotFoundException, InvalidorderException {
+		if(foodItem == null || foodItem.trim().isEmpty()) {
+			throw new InvalidorderException("Food is not available");
+			
+			
+		}
+		if(! availableItems.contains(foodItem)) {
+			throw new FoodNotFoundException (foodItem+" is not available in menu");
+			
+		}
+		orderHistory.add(foodItem);
+		System.out.println("Order is place"+foodItem);
+		
+	}
+
+	@Override
+	public void cancelOrder(String foodItem) throws InvalidorderException {
+		if(! orderHistory.contains(foodItem)) {
+			throw new InvalidorderException(foodItem);
+			
+		}
+		orderHistory.remove(foodItem);
+		System.out.println("your order will be cancled"+foodItem);
+		
+	}
+
+	@Override
+	public void viewMenu() {
+		System.out.println("Available item"+availableItems);
+		
+	}
+	private List <String> availableItems;
+	
+	private List<String> orderHistory;
+
+
+
+	public void setAvailableItems(List<String> availableItems) {
+		this.availableItems = availableItems;
+	}
+
+	public void setOrderHistory(List<String> orderHistory) {
+		this.orderHistory = orderHistory;
+	}
+	
+
+}

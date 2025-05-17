@@ -1,0 +1,5 @@
+package com.MovieBookingApplication.config;
+
+public class BookingAppConfig {
+
+}

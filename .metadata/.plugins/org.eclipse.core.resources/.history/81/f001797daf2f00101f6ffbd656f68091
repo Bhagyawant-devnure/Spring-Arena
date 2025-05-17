@@ -1,0 +1,5 @@
+package com.FoodDeliveryApplication.requirement;
+
+public interface FoodService {
+
+}

@@ -1,0 +1,5 @@
+package com.FoodDeliveryApplication.beans;
+
+public class ZomatoDelivery {
+
+}

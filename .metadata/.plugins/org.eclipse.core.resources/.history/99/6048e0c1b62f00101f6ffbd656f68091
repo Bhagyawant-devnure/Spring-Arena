@@ -1,0 +1,10 @@
+package com.FoodDeliveryApplication.user;
+
+public class FoodDeliveryUser {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+	}
+
+}

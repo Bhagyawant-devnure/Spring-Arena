@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="SBIBanckApplication" class="com.deva.Implementation">
+<property name="bankName" value="SBI Bank"/>
+<property name="bankAddress" value="jalna"/>
+<property name="IFSC_Code" value="SBI001"></property>
+
+</bean>
+<bean id="ICICIBankApplication" class="com.deva.Implementation">
+<property name="bankName" value="ICICI Bank"/>
+<property name="bankAddress" value="jalna"/>
+<property name="IFSC_Code" value="ICIC001"></property>
+
+</bean>
+ <!-- BankApplication Bean: switch sbiBank or iciciBank here -->
+    <bean id="bankApp" class="com.nit.implementation.BankApplication">
+        <constructor-arg ref="SBIBanckApplication"/> <!-- change to iciciBank if needed -->
+</bean>
+</beans>

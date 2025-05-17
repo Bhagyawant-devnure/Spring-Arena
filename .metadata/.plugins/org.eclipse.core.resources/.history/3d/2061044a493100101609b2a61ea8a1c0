@@ -1,0 +1,16 @@
+package com.MovieBookingApplication.implementation;
+
+import com.MovieBookingApplication.requirement.BookingService;
+
+public class MovieBookingApplication {
+	BookingService service;
+	
+	public MovieBookingApplication(BookingService service) {
+		this.service=service;
+	}
+	
+	public void book(String movieName)throw MovieNotFoundException,InvalidBookingException
+	{
+		
+	}
+

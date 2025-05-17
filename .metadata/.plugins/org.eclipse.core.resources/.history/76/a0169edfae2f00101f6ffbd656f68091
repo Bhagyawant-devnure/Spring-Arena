@@ -1,0 +1,10 @@
+package com.customeException.exception;
+
+import java.lang.classfile.Superclass;
+
+public class FoodNotFoundException extends Exception
+{
+public foodItemNotFoundException(String message){
+	super(message);
+}
+}

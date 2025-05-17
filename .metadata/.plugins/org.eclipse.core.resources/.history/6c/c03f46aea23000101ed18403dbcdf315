@@ -1,0 +1,78 @@
+package com.FoodDeliveryApplication.user;
+
+import java.applet.AppletContext;
+import java.util.Scanner;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextInitializer;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.FoodDeliveryApplication.implementation.FoodDeliveryApplication;
+import com.FoodDeliveryApplication.requirement.FoodService;
+
+public class FoodDeliveryUser {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("com/deva/cfgs/applicationContext.xml");
+	FoodDeliveryApplication app = ctx.getBean("foodApplication",FoodDeliveryApplication.class);
+		System.out.println("choose restaurant");
+		
+		System.out.println("1.zomato");
+		System.out.println("2.swiggy");
+		int rc =sc.nextInt();
+	    sc.nextLine();
+	    
+	    FoodService service = app.null;
+	    if(rc==1) {
+	    	service= ctx.getBean("Zomato",FoodService.class);
+	    }
+	    else if(rc ==2) {
+	    	service=ctx.getBean("swiggy",FoodService.class);
+	    }
+	    else {
+	    	System.out.println("Invalid Choice");
+	    }
+	    
+	    FoodDeliveryApplication fd = new FoodDeliveryApplication(service);
+	    
+	    while(true) {
+	    	System.out.println("\n1Order\n2.Cancle\n3.ViewMenu\n4.Exit");
+	    	int choice = sc.nextInt();
+	    	sc.nextLine();
+	    	
+	    
+	    try {
+	    	switch(choice) {
+	    	case 1: System.out.print("enter food to order");
+	    	String orderItem=sc.nextLine();
+	    	app.order(orderItem);
+	    	break;
+	    	
+	    	case 2:
+				System.out.println("Enter Food To cancel: ");
+				String item=sc.nextLine();
+				app.CncleOrder(item);
+				break;
+				
+			case 3:
+				app.viewMenu();
+				break;
+				
+			case 4:
+				System.exit(0);
+
+	    	}
+	    	
+	    	}
+	    catch(Exception e) {
+	    	System.err.println(e.getMessage());
+
+    		}
+	    
+	    
+	}
+	    }
+	    }
+
+

@@ -1,0 +1,5 @@
+package com.MovieBookingApplication.beans;
+
+public class BookMyShowService implements BookMyShowService{
+
+}

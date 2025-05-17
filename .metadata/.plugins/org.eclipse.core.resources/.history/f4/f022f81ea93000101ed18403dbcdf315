@@ -1,0 +1,5 @@
+package com.MovieBookingApplication.exception;
+
+public class MovieNotFoundException {
+
+}

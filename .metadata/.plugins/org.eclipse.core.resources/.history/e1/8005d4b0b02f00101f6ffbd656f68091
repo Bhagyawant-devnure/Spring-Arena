@@ -1,0 +1,26 @@
+package com.FoodDeliveryApplication.beans;
+
+import com.FoodDeliveryApplication.requirement.FoodService;
+import com.customeException.exception.FoodNotFoundException;
+import com.customeException.exception.InvalidorderException;
+
+public class ZomatoDelivery implements FoodService{
+	private static String restaurantName;
+	private static String restaurantLocation;
+	private static String restaurantCode;
+
+	
+
+	@Override
+	public void orderFood(String foodItem) throws FoodNotFoundException, InvalidorderException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void cancelOrder(String foodItem) throws InvalidorderException {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

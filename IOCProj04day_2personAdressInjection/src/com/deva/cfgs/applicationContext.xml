@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.deva.beans.Address">
+        <property name="city" value="Jalna" />
+        <property name="country" value="India" />
+    </bean>
+
+    <bean id="person" class="com.deva.beans.Person">
+        <property name="name" value="Bhagyawant" />
+        <property name="address" ref="address" />
+    </bean>
+
+</beans>

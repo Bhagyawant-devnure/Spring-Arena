@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="Zomato" class="com.FoodDeliveryApplication.beans.ZomatoDelivery">
+<property name="restaurantName" value="Hotel 7/12"></property>
+<property name="restaurantLocation" value="Jalna"></property>
+<property name="restaurantCode" value="111"></property>
+<property name="availableItems">
+<list>
+<value>biryani</value>
+<value>chicken currey</value>
+
+</list>
+</property>
+<property name="orderHistory">
+  </list>
+        </property>
+        <property name="orderHistory">
+            <list></list>
+</property>
+</bean>
+<bean id="foodApplication" class=" com.FoodDeliveryApplication.implementation.FoodDeliveryApplication">
+<constructor-arg ref="Zomato"></constructor-arg>
+
+</bean>
+</beans>

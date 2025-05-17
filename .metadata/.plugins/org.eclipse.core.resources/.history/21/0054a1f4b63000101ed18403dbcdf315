@@ -1,0 +1,23 @@
+package com.MovieBookingApplication.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.MovieBookingApplication.beans.BookMyShowService;
+import com.MovieBookingApplication.beans.InoxService;
+
+@Configuration
+
+public class BookingAppConfig {
+	
+	
+	@Bean
+	public BookMyShowService bean() {
+		
+		return new BookMyShowService();
+	}
+	@Bean
+	public InoxService bean() {
+		return new InoxService();
+	}
+}

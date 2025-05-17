@@ -1,0 +1,11 @@
+package com.FoodDeliveryApplication.implementation;
+
+import com.FoodDeliveryApplication.requirement.FoodService;
+
+public class FoodDeliveryApplication {
+	private FoodService foodService;
+	public FoodDeliveryApplication(FoodService foodService) {
+		this.foodService=foodService;
+	}
+
+}

@@ -1,0 +1,26 @@
+package com.MovieBookingApplication.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
+
+import com.MovieBookingApplication.beans.BookMyShowService;
+import com.MovieBookingApplication.beans.InoxService;
+
+@Configuration
+@ComponentScan(basePackages = "com.MovieBookingApplication.beans")
+public class BookingAppConfig {
+	
+	
+	@Bean
+	public BookMyShowService getBookMyShowService() {
+		BookMyShowService bookMyShowService = new BookMyShowService();
+		bookMyShowService.setCinemaName(cinemaName:"PVR CINEMA");
+		return new BookMyShowService();
+	}
+	@Bean
+	public InoxService getInoxService() {
+		return new InoxService();
+	}
+}

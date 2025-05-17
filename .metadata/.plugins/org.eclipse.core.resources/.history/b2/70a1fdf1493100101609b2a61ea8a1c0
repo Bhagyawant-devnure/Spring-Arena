@@ -1,0 +1,8 @@
+package com.MovieBookingApplication.requirement;
+
+public interface BookingService {
+	void bookTicket(String movieName) throws MovieNotFoundException,InvalidBookingException;
+	void cancleTicket(String movieName) throws InvalidBookingException;
+	void viewShows();
+
+}
