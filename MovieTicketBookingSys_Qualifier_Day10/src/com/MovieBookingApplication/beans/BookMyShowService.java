@@ -12,6 +12,7 @@ public class BookMyShowService implements BookingService{
 	private static String partnerCode;
 	
 
+	//Setter injection
 	public static void setCinemaName(String cinemaName) {
 		BookMyShowService.cinemaName = cinemaName;
 	}
